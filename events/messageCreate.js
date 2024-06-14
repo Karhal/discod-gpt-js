@@ -68,11 +68,7 @@ module.exports = {
             return fs.writeFileSync(imagePath, imageData);
 
         }).then(() => {
-
-            console.log('Image saved locally:', imagePath);
             message.channel.send(finalResponse);
-            console.log('Message sent');
-
         }).finally(async () => {
 
             if(hasImage) {
